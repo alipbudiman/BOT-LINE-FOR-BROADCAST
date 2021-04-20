@@ -1,19 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-#
-__author__ = "Anysz"
-__email__  = "anyoneelsegg@gmail.com"
-__status__ = "Ready, send bug to the email"
-#
-# Free to use, all credits belong to me, Anysz.
-# Feel free to report bugs :D
-# Run:
-#    python archimed.py 
-#  or
-#    python 
-#    >>> from archimed import Archimed
-#    >>> x = Archimed("1-5", range(8)).parse()
-#
 class Alipsplit(object):
     data_array = []
     datalist = []
