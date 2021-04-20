@@ -5,7 +5,7 @@
 #------------------------------------------------------------- Line: alifbudimanwahabbi
 from alipmodule import * #import module
 #login account
-alip = ALIP_LINE(myToken="ub4ce1a050c1faa1f612a9d7a9207589f:aWF0OiAxNjE3MTkzMjExNDE1Cg==..nLYKDxgwz6EXqCKJGqcAP4L8bXk=", #  <--- imput your token here
+alip = ALIP_LINE(myToken="YOUR TOKEN", #  <--- imput your token here
             myApp="ANDROIDLITE\t2.14.0\tAndroid OS\t5.1.1")
 #data
 ALIPmid = alip.profile.mid
