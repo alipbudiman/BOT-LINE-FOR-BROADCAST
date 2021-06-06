@@ -1,8 +1,3 @@
-# simplybroadcastbot
-# find me on
-# Instagram: alifbudimanwahabbi
-# Line: alifbudimanwahabbi
-
 simpel bot broadcast for LINE
 
 
