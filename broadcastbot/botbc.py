@@ -1,6 +1,4 @@
-#Original Script from https://github.com/herywinarto/SIMPLE-PROTECTV2, Rebuild by Alif Budiman Wahabbi
-#Thanks to Me, God, Herywinarto, Ka Puthry, Ossas, Dolphin, Nazri, Bagas, Bang Veza
-#---------- Mas Ben, Bang El-Fox, and All of my Friends.
+#Original lib from https://github.com/herywinarto/SIMPLE-PROTECTV2, Rebuild by Alif Budiman Wahabbi
 #---------- Copyright 2021 by Alif Budiman Wahabbi, find me on Instagram: alifbudimanwahabbi
 #------------------------------------------------------------- Line: alifbudimanwahabbi
 from alipmodule import * #import module
@@ -9,8 +7,8 @@ alip = ALIP_LINE(myToken="YOUR TOKEN", #  <--- imput your token here
             myApp="ANDROIDLITE\t2.14.0\tAndroid OS\t5.1.1")
 #data
 ALIPmid = alip.profile.mid
-creator = ["u666672dc4bd8b1663a720d3367275c8e"] #imput your mid here
-owner = ["u666672dc4bd8b1663a720d3367275c8e"] #imput your mid here
+creator = [""] #imput your mid here
+owner = [""] #imput your mid here
 Bots = []
 Blacklist = []
 ongoingbc = []
@@ -745,5 +743,11 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
                     alip.individualRev = int(op.param1.split("\x1e")[0])
                 alip.localRev = max(op.revision, alip.localRev)
                 executor.submit(worker,op)
-        except:
-            pass
+        except Exception as e:
+            e = traceback.format_exc()
+            if "EOFError" in e:pass
+            elif "ShouldSyncException" in e or "LOG_OUT" in e:
+                python3 = sys.executable
+                os.execl(python3, python3, *sys.argv)
+            else:
+                traceback.print_exc()
