@@ -1,6 +1,6 @@
 simpel bot broadcast for LINE
 
-suitable for roleplay accounts that sell online or become lpm bots
+suitable for roleplay accounts that seller online or become lpm bots
 
 
 Imput access token in botbc.py
