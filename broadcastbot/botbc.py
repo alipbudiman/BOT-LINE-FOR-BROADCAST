@@ -1,6 +1,6 @@
 #Original lib from https://github.com/herywinarto/SIMPLE-PROTECTV2, Rebuild by Alif Budiman Wahabbi
 #---------- Copyright 2021 by Alif Budiman Wahabbi, find me on Instagram: alifbudimanwahabbi
-#------------------------------------------------------------- Line: alifbudimanwahabbi
+#------------------------------------------------------------- Line: alip_budiman
 from alipmodule import * #import module
 #login account
 alip = ALIP_LINE(myToken="YOUR TOKEN", #  <--- imput your token here
