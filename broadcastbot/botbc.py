@@ -9,15 +9,27 @@ from alipmodule import * #import module
 BEAPI_HOST = "https://beta.beapi.me"
 HTTPS2 = httpx.Client(http2=True,timeout=120)
 
-authToken = "YOUR TOKEN", #  <--- imput your PRIMARY ACCESS here
-appName = "CHROMEOS\t2.4.6\tChrome OS\t1"
+
+
+def Convert2Secondary(appName,authToken):
 params = {
     "appname": appName,
     "authtoken": authToken
 }
 resp = HTTPS2.get(BEAPI_HOST+"/lineprimary2secondary",params=params).json()
+return resp
 
-alip = ALIP_LINE(myToken=resp["result"]["token"], myApp=appName)
+LINEapp = "CHROMEOS\t2.4.6\tChrome OS\t1"
+X_LINE_ACCESS = "YOUR PRIMARY TOKEN"
+
+getaccess = Convert2Secondary(LINEapp,X_LINE_ACCESS) #<--- ADD YOUR PRIMARY ACCESS TOKEN
+
+if getaccess["status"] != 200:
+    raise Exception (resp["reason"])
+else:
+    alip = ALIP_LINE(myToken=getaccess["result"]["token"], myApp=LINEapp)
+
+
 #data
 ALIPmid = alip.profile.mid
 creator = [""] #imput your mid here
