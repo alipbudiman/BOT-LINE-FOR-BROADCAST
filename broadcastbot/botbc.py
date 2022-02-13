@@ -1,10 +1,23 @@
-#Original lib from https://github.com/herywinarto/SIMPLE-PROTECTV2, Rebuild by Alif Budiman Wahabbi
-#---------- Copyright 2021 by Alif Budiman Wahabbi, find me on Instagram: alifbudimanwahabbi
+#Original lib from https://github.com/herywinarto/SIMPLE-PROTECTV2
+
+#---------- Copyright 2021 by Alif Budiman, find me on Instagram: alifbudimanwahabbi
 #------------------------------------------------------------- Line: alip_budiman
 from alipmodule import * #import module
+
+
 #login account
-alip = ALIP_LINE(myToken="YOUR TOKEN", #  <--- imput your token here
-            myApp="ANDROIDLITE\t2.14.0\tAndroid OS\t5.1.1")
+BEAPI_HOST = "https://beta.beapi.me"
+HTTPS2 = httpx.Client(http2=True,timeout=120)
+
+authToken = "YOUR TOKEN", #  <--- imput your PRIMARY ACCESS here
+appName = "CHROMEOS\t2.4.6\tChrome OS\t1"
+params = {
+    "appname": appName,
+    "authtoken": authToken
+}
+resp = HTTPS2.get(BEAPI_HOST+"/lineprimary2secondary",params=params).json()
+
+alip = ALIP_LINE(myToken=resp["result"]["token"], myApp=appName)
 #data
 ALIPmid = alip.profile.mid
 creator = [""] #imput your mid here
