@@ -20,9 +20,9 @@ resp = HTTPS2.get(BEAPI_HOST+"/lineprimary2secondary",params=params).json()
 return resp
 
 LINEapp = "CHROMEOS\t2.4.6\tChrome OS\t1"
-X_LINE_ACCESS = "YOUR PRIMARY TOKEN"
+X_LINE_ACCESS = "YOUR PRIMARY TOKEN" #<--- ADD YOUR PRIMARY ACCESS TOKEN
 
-getaccess = Convert2Secondary(LINEapp,X_LINE_ACCESS) #<--- ADD YOUR PRIMARY ACCESS TOKEN
+getaccess = Convert2Secondary(LINEapp,X_LINE_ACCESS) 
 
 if getaccess["status"] != 200:
     raise Exception (resp["reason"])
