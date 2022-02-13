@@ -3,9 +3,9 @@ simpel bot broadcast for LINE
 suitable for roleplay accounts that seller online or become lpm bots
 
 
-Imput access token in botbc.py
+Imput X-LINE-ACCESS Token.
 
->> alip = ALIP_LINE(myToken="YOUR TOKEN", #  <--- imput your token here
+>> X_LINE_ACCESS = "YOUR PRIMARY TOKEN" #<--- ADD YOUR PRIMARY ACCESS TOKEN
 
 and save
 
