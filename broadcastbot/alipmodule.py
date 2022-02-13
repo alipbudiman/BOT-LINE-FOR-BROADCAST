@@ -6,7 +6,7 @@ from AlipService.ttypes import *
 from threading import Thread
 from Naked.toolshed.shell import execute_js
 from datetime import datetime, timedelta
-import time, json, livejson, requests, os, random, ast, datetime, sys, concurrent.futures, asyncio, codecs, threading, pytz, random
+import time, json, livejson, requests, os, random, ast, datetime, sys, concurrent.futures, asyncio, codecs, threading, pytz, random, httpx
 
 class ALIP_LINE:
     def __init__(self, myToken, myApp, pool=False):
